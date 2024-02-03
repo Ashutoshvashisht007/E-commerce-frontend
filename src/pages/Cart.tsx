@@ -13,7 +13,7 @@ const Cart = () => {
 
   const dispatch = useDispatch();
 
-  const { cartItems, subtotal, tax, total, shippingCharges, shippingInfo, discount } = useSelector((state: { cartReducer: cartReducerInitialState }) => state.cartReducer)
+  const { cartItems, subtotal, tax, total, shippingCharges, discount } = useSelector((state: { cartReducer: cartReducerInitialState }) => state.cartReducer)
 
   const [couponCode, setCouponCode] = useState<string>("");
   const [isValidCouponCode, setIsValidCouponCode] = useState<boolean>(false);

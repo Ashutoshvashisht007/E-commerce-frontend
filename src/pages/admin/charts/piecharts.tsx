@@ -1,6 +1,5 @@
 import AdminSidebar from "../../../components/admin/AdminSidebar";
 import { DoughnutChart, PieChart } from "../../../components/admin/Charts";
-import data1 from "../../../assets/data.json";
 import { useDashboardPieQuery } from "../../../redux/api/dashboardAPI";
 import { useSelector } from "react-redux";
 import { userReducerInitialState } from "../../../types/reducer_types";

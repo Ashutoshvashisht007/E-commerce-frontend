@@ -4,7 +4,7 @@ import { Column } from "react-table";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { userReducerInitialState } from "../types/reducer_types";
-import { useAllOrdersQuery, useMyOrdersQuery } from "../redux/api/orderAPI";
+import { useMyOrdersQuery } from "../redux/api/orderAPI";
 import { customError } from "../types/api_types";
 import toast from "react-hot-toast";
 
@@ -48,7 +48,7 @@ const Order = () => {
 
     const { user } = useSelector((state: { userReducer: userReducerInitialState }) => state.userReducer);
 
-    const { isLoading, data, isError, error } = useMyOrdersQuery(user?._id!);
+    const { data, isError, error } = useMyOrdersQuery(user?._id!);
 
 
     if (isError) {
