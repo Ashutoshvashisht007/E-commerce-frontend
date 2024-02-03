@@ -54,7 +54,7 @@ const Customers = () => {
   const [deleteUser] = useDeleteUserMutation();
   const navigate = useNavigate();
 
-  const {data, isError, error, isLoading} = useAllUsersQuery(user?._id!);
+  const {data, isError, error} = useAllUsersQuery(user?._id!);
   
   if(isError)
   {
