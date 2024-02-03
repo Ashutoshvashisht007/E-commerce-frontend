@@ -1,0 +1,124 @@
+@import "../admin-styles/mixin";
+
+.cart{
+    padding: 2rem 4rem;
+    height: calc(100vh - 4rem);
+    @include flex(row,space-between,stretch,3rem);
+   
+}
+
+.cartLeftContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+.cartLeftContainer{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    gap: 2rem;
+    overflow-y: auto;
+    // &::--webkit-scrollbar{
+    //     display: none;
+    // }
+    
+
+    .cartProductsLeft{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cartProductDetails{
+        display: flex;
+        align-items: center;
+
+        
+        > img{
+            object-fit: contain;
+            @include square(calc(18rem - 3rem));
+        }
+
+        .cartProductDesc{
+            margin-left: 15px;
+        }
+    }
+
+    .cartButtons{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .cartButton{
+            padding: 10px;
+            border: none;
+            background-color: $color1;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+
+            &:hover{
+                background-color: $color2;
+                color: white;
+            }
+        }
+
+        .cartButtonDel{
+            padding: 10px;
+            border: none;
+            background-color: $color1;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        >span{
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .cartButtonDelete{
+            font-size: 20px !important;
+            color: red;
+        }
+
+        
+    }
+    
+}
+
+.cartRightContainer{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    >input{
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $color4;
+    }
+
+    .cartCouponBtn{
+        padding: 10px;
+        width: 50%;
+        cursor: pointer;
+        background-color: $color3;
+        border: none;
+        color: white;
+        border-radius: 10px;
+    }
+
+    .greenText{
+        text-align: center;
+    }
+
+    .redText{
+        text-align: center;
+    }
+}
